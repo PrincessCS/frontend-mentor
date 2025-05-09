@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Karla', sans-serif;
+    background-color: hsl(148, 38%, 91%);
+}
+
+section{
+    background-color: #fff;
+    border-radius: 10px;
+    width: 40%;
+    padding: 2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+form{
+    margin-top: 1em;
+    width: 100%;
+}
+
+form input{
+    outline: none;
+}
+
+form .name{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.radio-btns {
+  display: flex;
+  justify-content: space-between; 
+  gap: 30px; 
+}
+
+.radio-btns div {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc; 
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%; 
+  cursor: pointer;
+}
+
+.radio-btns input {
+  margin-right: 10px; 
+}
+
+form .input-group, form .email, form .message{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+form label, form #query-type {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input, textarea{
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea{
+    resize: none;
+    outline: none;
+}
+
+form .email, form #query-type, form .message, form .checkbox, button{
+    margin-top: 1em;
+}
+
+.error{
+    color: hsl(0, 66%, 54%);
+}
+
+button{
+    cursor: pointer;
+    background-color: hsl(169, 82%, 27%);
+    font-family: 'Karla', sans-serif;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover{
+    transform: scale(1.0);
+    background-color: hsl(186, 15%, 59%);
+}
+
+/*success modal*/
+#success-modal{
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2em;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+.modal-content button {
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  border: none;
+  background-color: hsl(169, 82%, 27%);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*media queries*/
+@media(max-width:1200px){
+    section{
+        width: 60%;
+    }
+}
+
+@media(max-width:768px){
+    .radio-btns{
+        flex-direction: column;
+    }
+}
+
+@media(max-width:576px){
+    section{
+        width: 70%;
+        top: 60%;
+    }
+}
+
+@media(max-width:480px){
+    section{
+        width: 90%;
+        top: 50%;
+    }
+}
+
+@media(max-width:380px){
+    section{
+        top: 65%;
+    }
+}
+
+@media(max-width:350px){
+    section{
+        top: 50%;
+    }
+}
