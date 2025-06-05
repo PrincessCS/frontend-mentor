@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <title>Frontend Mentor | Conference ticket generator</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="ticket.css">
+</head>
+<body>
+    <section class="header-section">
+      <header>
+        <img src="./assets/images/logo-full.svg" alt="logo">
+        <h1>Congrats, <span class="user-name" id="name"></span>! Your 
+        ticket is ready</h1>
+        <p> We've emailed your ticket to <br><span class="email-address" id="email"></span>
+             and will send updates in <br>the run up to the event.</p>
+      </header>
+    </section>
+
+    <main>
+        <section class="ticket-section">
+            <div class="ticket-card">
+                <img src="./assets/images/pattern-ticket.svg" alt="ticket-pattern" id="ticket-card">
+
+                <div class="ticket-details">
+                    <div class="ticket-details-top">
+                         <img src="./assets/images/logo-full.svg" alt="">
+                         <p>Jan 31, 2025 / Austin, TX</p>
+                    </div>
+
+                    <div class="ticket-details-bottom">
+                    <div><img src="" alt="" id="image"></div>
+                    <div>
+                        <h4 class="user-name"></h4>
+                        <div class="user-git">
+                          <img src="./assets/images/icon-github.svg" alt="github" id="github-icon">
+                          <p class="email-address"></p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="ticket-no">
+                    <p>#01609</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section>
+      <div class="background-line-bottom">
+        <img src="./assets/images/pattern-squiggly-line-bottom-desktop.svg" alt="squigly-line">
+      </div>
+
+      <div class="background-line-top">
+        <img src="./assets/images/pattern-squiggly-line-top.svg" alt="squigly-line">
+      </div>
+    </section>
+ <script src="ticket.js"></script>   
+</body>
+</html>

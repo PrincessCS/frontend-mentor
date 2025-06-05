@@ -1,0 +1,241 @@
+.header-section{
+    width: 40%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.ticket-section{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.ticket-card{
+    position: relative;
+}
+
+.ticket-details{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 70%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.ticket-details-top img{
+    width: 60%;
+}
+
+.ticket-details p{
+    color: hsl(252, 6%, 83%);
+}
+
+.ticket-details-top{
+    display: flex;
+    flex-direction: column;
+}
+
+.ticket-details-top p{
+    margin-left: 3.5em;
+    margin-top: 0.6em;
+}
+
+#name{
+    background: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#email{
+    color: hsl(7, 88%, 67%);
+}
+
+.ticket-details-bottom{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#image{
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.user-git{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.6em;
+    gap: 0.5em;
+}
+
+#github-icon{
+    width: 20px;
+    height: 20px;
+}
+
+.ticket-details-bottom h4{
+    font-size: 1.7rem;
+    color: #fff;
+}
+
+.ticket-no{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: rotate(90deg);
+    font-size: 1.2rem;
+    color:hsl(245, 15%, 58%);
+}
+
+/*media queries*/
+@media(max-width:1200px){
+    .header-section{
+        top: 25%;
+    }
+
+    .ticket-section{
+        top: 80%;
+    }
+}
+
+@media(max-width:992px){
+    .header-section{
+        width: 50%;
+        top: 20%;
+    }
+
+    .ticket-section{
+        top: 50%;
+    }
+
+    .background-line-bottom img{
+        width: 70%;
+    }
+}
+
+@media(max-width:768px){
+    .header-section{
+        width: 60%;
+    }
+
+    .ticket-section{
+        top: 60%;
+    }
+}
+
+@media(max-width:576px){
+    .header-section{
+        width: 80%;
+    }
+
+    .ticket-section{
+        top: 70%;
+    }
+
+    #ticket-card{
+        width: 500px;
+    }
+
+    .ticket-details-top img{
+        width: 60%;
+    }
+
+    #image{
+        width: 70px;
+        height: 70px;
+    }
+
+    .ticket-no{
+        top: 48%;
+    }
+}
+
+@media(max-width:480px){
+    .header-section{
+        width: 90%;
+    }
+    .ticket-section{
+        top: 60%;
+    }
+
+    #ticket-card{
+        width: 380px;
+    }
+
+    .ticket-details{
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 150px;
+    }
+
+    .ticket-details-bottom h4{
+        font-size: 1.5rem;
+    }
+
+    #image{
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media(max-width:380px){
+    .header-section{
+        width: 100%;
+        top: 30%;
+    }
+
+    .ticket-section{
+        top: 80%;
+    }
+
+    .ticket-details p{
+        font-size: 0.8rem;
+    }
+
+    .ticket-details-bottom h4{
+        font-size: 1.3rem;
+    }
+
+    #ticket-card{
+        width: 350px;
+    }
+
+    .ticket-no{
+        font-size: 1rem;
+    }
+}
+
+@media(max-width:350px){
+    .ticket-section{
+        top: 70%;
+    }
+    
+    #ticket-card{
+        width: 300px;
+    }
+
+    .ticket-details{
+        height: 120px;
+    }
+
+    .ticket-details p{
+        font-size: 0.7rem;
+    }
+
+    #image{
+        width: 40px;
+        height: 40px;
+    }
+}

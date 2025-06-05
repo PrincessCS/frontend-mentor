@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Conference ticket generator</title>
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+   
+    <section class="header-section">
+      <header>
+        <img src="./assets/images/logo-full.svg" alt="logo">
+        <h1> Your Journey to Coding Conf 2025 Starts Here!</h1>
+        <p> Secure your spot at next year's biggest coding conference.</p>
+      </header>
+    </section>
+
+     <!--form-->
+    <section class="form-section">
+      <form action="">
+        <div class="input-group">
+          <h4>Upload Avatar</h4>
+          <label for="upload" class="custom-upload">
+           <img src="./assets/images/icon-upload.svg" alt="Upload Icon" class="upload-icon" />
+           <span class="placeholder">Drag and drop or click to upload</span>
+           <div id="preview-container" style="display: none;">
+              <img style="margin-top: 10px; max-width: 100px; display: none;" id="preview" />
+              <div style="display: flex; justify-content: space-between; gap: 10px;">
+                <button id="remove-img">Remove Image</button>
+                <button id="change-img">Change Image</button>
+              </div>
+           </div>
+          </label>
+          <input type="file" id="upload" accept="image/png, image/jpeg" hidden />
+          <p class="upload-subtext">Upload your photo (JPG or PNG, max size: 500KB).</p>
+          <p id="image-error" class="error"></p>
+       </div>
+
+
+        <div class="input-group">
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name">
+          <p id="name-error" class="error"></p>
+        </div>
+
+        <div class="input-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="example@email.com">
+          <p id="email-error" class="error"></p>
+        </div>
+
+        <div class="input-group">
+          <label for="github">GitHub Username</label>
+          <input type="text"id="github" placeholder="@yourusername">
+          <p id="github-error" class="error"></p>
+        </div>
+
+        <div>
+          <button class="ticket-btn">Generate My Ticket</button>
+        </div>       
+      </form>
+    </section>
+  </main>
+
+  <section>
+    <div class="background-line-bottom">
+      <img src="./assets/images/pattern-squiggly-line-bottom-desktop.svg" alt="squigly-line">
+    </div>
+
+    <div class="background-line-top">
+      <img src="./assets/images/pattern-squiggly-line-top.svg" alt="squigly-line">
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
