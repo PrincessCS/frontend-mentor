@@ -4,7 +4,7 @@ function checkAge(){
     const currentYear = date.getFullYear();
     const currentMonth = date.getMonth() + 1; // months are 0 indexed in JS
     const validMonths = 12;
-    const currentDay = date.getDay();
+    const currentDay = date.getDate();
 
     let isValid = true;
 
@@ -75,9 +75,9 @@ function checkAge(){
     }
      
     //calculation 
-    const calcYear = currentYear - yearInputValue;
-    const calcMonth = monthInputValue - currentMonth;
-    const calcDay = dayInputValue - currentDay;
+    let calcYear = currentYear - yearInputValue;
+    let calcMonth = monthInputValue - currentMonth;
+    let calcDay = dayInputValue - currentDay;
     
     //preventing negative values
     if (calcDay < 0) {
