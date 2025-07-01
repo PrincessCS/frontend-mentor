@@ -16,3 +16,4 @@ function getAdvice(){
     });
 }
 button.addEventListener("click", getAdvice);
+getAdvice();

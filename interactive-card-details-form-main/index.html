@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <section class="cards-container">
+      <div class="card-front">
+        <img src="./images/bg-card-front.png" alt="card-front" />
+        <img src="./images/card-logo.svg" alt="card-logo" id="card-logo" />
+        <p id="card-no">0000 0000 0000 0000</p>
+        <div class="card-name-cvc-group">
+          <p id="card-holder">Odo Chidera Princess</p>
+          <p id="cvc-preview">00/00</p>
+        </div>
+      </div>
+
+      <div class="card-back">
+        <img src="./images/bg-card-back.png" alt="card-back" />
+        <p id="back-cvc">000</p>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <form autocomplete="on">
+        <label for="cardholder-name">Cardholder Name</label>
+        <input
+          type="text"
+          class="cardholder-name"
+          id="cardholder-name"
+          name="cc-name"
+          autocomplete="cc-name"
+          placeholder="e.g. Odo Chidera Princess"
+        />
+        <p id="card-name-error"></p>
+
+        <label for="card-number">Card Number</label>
+        <input
+          type="text"
+          id="card-number"
+          class="card-number"
+          name="cc-number"
+          autocomplete="cc-number"
+          placeholder="e.g. 1234 5678 9123 0000"
+          maxlength="19"
+        />
+        <p id="card-number-error"></p>
+
+        <div class="date-and-cvc-group">
+          <div class="exp-date-group">
+            <label for="exp-month">Exp. Date (MM/YY)</label>
+            <div class="exp-inputs">
+              <input
+                type="text"
+                id="exp-month"
+                class="exp-month"
+                name="cc-exp-month"
+                autocomplete="cc-exp-month"
+                placeholder="MM"
+                maxlength="2"
+              />
+              <input
+                type="text"
+                id="exp-year"
+                class="exp-year"
+                name="cc-exp-year"
+                autocomplete="cc-exp-year"
+                placeholder="YY"
+                maxlength="2"
+              />
+            </div>
+            <p id="expiry-error"></p>
+          </div>
+
+          <div class="cvc-group">
+            <label for="cvc">CVC</label>
+            <input
+              type="text"
+              id="cvc"
+              class="cvc"
+              name="cc-csc"
+              autocomplete="cc-csc"
+              placeholder="e.g. 123"
+              maxlength="4"
+            />
+            <p id="cvc-error"></p>
+          </div>
+        </div>
+      </form>
+      <button class="confirm-btn">Confirm</button>
+    </section>
+
+    <section class="complete-section">
+     <img src="images/icon-complete.svg" alt="complete-icon">
+     <h2>THANK YOU!</h2>
+     <p>We've added your card details</p>
+     <button class="continue-btn">Continue</button>
+   </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

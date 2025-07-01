@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background-image: url(./images/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em 5%;
+  gap: 50px;
+  position: relative;
+}
+
+.cards-container {
+  position: relative;
+  width: 50%;
+  min-height: 500px;
+}
+
+.card-front {
+  position: absolute;
+  top: 20%;
+  left: 0;
+}
+
+.card-back {
+  position: absolute;
+  top: 72%;
+  left: 15%;
+}
+
+.card-back img, .card-front img{
+  width: 100%;
+}
+
+#card-logo {
+  position: absolute;
+  top: 10%;
+  left: 8%;
+  width: 60px;
+}
+
+#card-no {
+  position: absolute;
+  top: 55%;
+  left: 8%;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.card-name-cvc-group {
+  position: absolute;
+  top: 80%;
+  left: 8%;
+  right: 10%;
+  display: flex;
+  justify-content: space-between;
+  color: hsl(0, 100%, 100%);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+#back-cvc {
+  position: absolute;
+  top: 45%;
+  right: 12%;
+  color: hsl(0, 100%, 100%);
+  font-size: 0.9rem;
+}
+
+.form-section {
+  margin-top: 10em;
+  margin-right: 5em;
+  width: 50%;
+  max-width: 400px;
+}
+
+form label {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  display: block;
+  margin-top: 0.5em;
+}
+
+form input {
+  width: 100%;
+  padding: 10px 15px;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+  border: 1px solid hsl(270, 3%, 87%);
+  border-radius: 5px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  outline: none;
+}
+
+input::placeholder {
+  font-family: 'Space Grotesk', sans-serif;
+  color: hsl(212, 12%, 71%);
+}
+
+.date-and-cvc-group {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.exp-date-group,
+.cvc-group {
+  flex: 1;
+}
+
+.exp-inputs {
+  display: flex;
+  gap: 10px;
+}
+
+.exp-inputs input {
+  width: 50%;
+}
+
+button{
+  width: 100%;
+  background-color: hsl(278, 68%, 11%);
+  font-family: 'Space Grotesk', sans-serif;
+  color: hsl(0, 100%, 100%);
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 15px;
+  margin-top: 1em;
+  cursor: pointer;
+}
+
+input:focus {
+  border: 1px solid purple;
+}
+
+#card-number-error, #expiry-error, #cvc-error{
+    font-size: 0.8rem;
+}
+
+.complete-section{
+  display: none;
+  margin-right: 12em;
+  margin-top: 5em;
+  text-align: center;
+}
+
+.complete-section h2{
+  margin-top: 1em;
+}
+
+.complete-section p{
+  color: hsl(212, 12%, 71%);
+  margin-top: 1em;
+}
+
+.complete-section button{
+  margin-top: 1em;
+  padding: 12px 30px;
+}
+
+/* media queries */
+@media (max-width: 1200px) {
+  .cards-container {
+    width: 45%;
+  }
+
+  .card-front {
+    top: 20%;
+    left: 0;
+    transform: scale(0.95);
+    transform-origin: top left;
+  }
+
+  .card-back {
+    top: 72%;
+    left: 5%;
+    transform: scale(0.95);
+    transform-origin: top left;
+  }
+
+  .form-section {
+    margin-right: 1em;
+    width: 50%;
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    background-image: url(./images/bg-main-mobile.png);
+    min-height: 100%;
+  }
+
+  main {
+    flex-direction: column;
+    gap: 3em;
+  }
+
+  .cards-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+   .card-front {
+    position: absolute;
+    top: 90%;
+    left: 20%;
+    transform: scale(1);
+    z-index: 2;
+  }
+
+  .card-back {
+    position: absolute;
+    top: 62%;
+    left: 30%;
+    transform: scale(1);
+  }
+
+  .form-section {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 12em;
+    padding: 0 1em;
+  }
+
+  .complete-section{
+    margin-top: 14em;
+    margin-left: 10em;
+    width: 70%;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .cards-container {
+    width: 100%;
+    min-height: 450px;
+    position: relative;
+  }
+
+  .card-front {
+    position: absolute;
+    top: 75%;
+    left: 20%;
+    transform: scale(1);
+    z-index: 2;
+  }
+
+  .card-back {
+    position: absolute;
+    top: 45%;
+    left: 30%;
+    transform: scale(1);
+  }
+
+  .form-section {
+    width: 100%;
+    max-width: 700px;
+    margin-right: 0;
+    margin-top: 10em;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-front {
+    left: 15%;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-front {
+    top: 31%;
+    left: 0;
+  }
+
+  .card-back {
+    top: 2%;
+    left: 5%;
+  }
+
+  .form-section {
+    margin-top: 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1em;
+  }
+
+  .complete-section{
+    margin-top: 2em;
+    margin-left: 10em;
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-front {
+    top: 35%;
+    left: 0;
+    transform: scale(0.9);
+  }
+
+  #card-no, .card-name-cvc-group, #card-logo{
+    left: 5%;
+  }
+
+  #card-no{
+    font-size: 1.5rem;
+  }
+
+  .card-back {
+    top: 5%;
+    left: 10%;
+    transform: scale(0.9);
+  }
+
+  .cards-container {
+    min-height: 320px;
+  }
+
+  .form-section,
+  .complete-section {
+    padding: 0 1em;
+  }
+
+  .complete-section{
+    margin-left: 12em;
+  }
+}
+
+@media (max-width: 380px) {
+  .card-front {
+    top: 38%;
+    left: 4%;
+  }
+
+  .card-back {
+    top: 13%;
+    left: 12%;
+  }
+
+  #card-no {
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+  }
+
+  .card-name-cvc-group {
+    font-size: 0.7rem;
+  }
+
+  #back-cvc {
+    font-size: 0.8rem;
+  }
+
+  .form-section {
+    padding: 0 0.8em;
+  }
+}
+
+@media (max-width: 350px) {
+  .card-front {
+    top: 35%;
+    left: 2%;
+  }
+
+  .card-back {
+    top: 10%;
+    left: 8%;
+  }
+
+  .form-section {
+    width: 100%;
+    padding: 0 0.5em;
+    margin-top: 0;
+  }
+
+  input {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  button {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
+
+  .complete-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .complete-section p {
+    font-size: 0.95rem;
+  }
+
+  #card-number-error,
+  #expiry-error,
+  #cvc-error {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 162px) {
+  .card-front,
+  .card-back {
+    position: static;
+    transform: scale(0.85);
+    margin-bottom: 0.5rem;
+  }
+
+  .form-section {
+    width: 100%;
+    margin: 0;
+    padding: 0 0.25em;
+  }
+
+  input {
+    padding: 6px;
+    font-size: 0.75rem;
+  }
+
+  button {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+
+  .complete-section h2 {
+    font-size: 1rem;
+  }
+
+  .complete-section p {
+    font-size: 0.75rem;
+  }
+
+  #card-number-error,
+  #expiry-error,
+  #cvc-error {
+    font-size: 0.6rem;
+  }
+
+  .cards-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
